@@ -1,0 +1,54 @@
+.main {
+    background-color: #000;
+}
+.mainSearchPage {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchPageResults {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.backIcon {
+    font-size: 1em;
+    fill: white;
+    cursor: pointer;
+}
+.forwardIcon {
+    font-size: 1em;
+    fill: white;
+    cursor: pointer;
+}
+.pagination {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.pagination button {
+    background-color: #4b231b;
+    color: white;
+    width: 55px;
+    height: 35px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+.pagination button:hover {
+    background-color: rgb(95, 53, 48);
+}
+.actualPage {
+    background-color: rgb(87, 61, 59);
+}
