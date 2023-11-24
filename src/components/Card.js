@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Loading from './Loading'
 
 export default function Card({movie}) {
+
     return (
         <>
         {movie ? (
@@ -17,7 +18,7 @@ export default function Card({movie}) {
                         </h3>
                     </a>    
                 </Link>
-                <p>Note: {movie.vote_average}</p>
+                <p>Note: {movie.vote_average.toFixed(1)}</p>
                 
             </div>
         </div>

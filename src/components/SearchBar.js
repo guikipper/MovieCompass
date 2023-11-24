@@ -1,11 +1,15 @@
 import styles from '../styles/SearchBar.module.css'
 import SearchIcon from '@mui/icons-material/Search';
 import { useRouter } from "next/router";
+import { useState } from 'react'
 import React, { useRef } from 'react';
 
 export default function searchBar({placeholder, setResults, input, setInput, setClearResults}) {
     const router = useRouter();
     const inputRef = useRef(null);
+
+    const [movieResults, setMovieResults] = useState([])
+    const [selectedItem, setSelectedItem] = useState(null); //item selecionado
 
     async function getMovieSearch(value) {
         const api_key= process.env.NEXT_PUBLIC_API_KEY
@@ -22,16 +26,28 @@ export default function searchBar({placeholder, setResults, input, setInput, set
             ) 
         })
         setResults(filteredResults)
+        setMovieResults(filteredResults)
+       
     }
 
     const handleKeyDown = (e) => {
         const value = e.target.value;
         if (e.key === 'Enter') {
-            console.log('Enter')
             router.push(`/search/${value}`)
             setInput('')
             setClearResults(true)
         }
+        if (e.key === 'ArrowUp') {
+
+            console.log('Up')
+            e.preventDefault();
+
+
+          } else if (e.key === 'ArrowDown') {
+            console.log('Down')
+            e.preventDefault();
+
+          }
     }
 
     const handleChange = (value) => {

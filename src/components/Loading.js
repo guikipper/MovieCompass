@@ -2,6 +2,11 @@ import loading from '../../public/images/loading.svg'
 import styles from '../styles/Loading.module.css'
 import Image from 'next/image';
 
+
+//imports
+
+
+//
 function Loading () {
     return (
         <div className={styles.loading}>

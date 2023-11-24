@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import styles from '../../styles/MovieDetails.module.css'
 import Loading from '../../components/Loading'
+import React from 'react'
 
 
 export default function MovieDetails() {
@@ -10,15 +11,20 @@ export default function MovieDetails() {
 
     const api_key= process.env.NEXT_PUBLIC_API_KEY
     const movie_url = process.env.NEXT_PUBLIC_MOVIE_URL
+    const [date, setDate] = useState()
+    const [budget, setBudget] = useState()
+    const [revenue, setRevenue] = useState()
     
     //states
-    const [movie, setMovie] = useState()
+    const [movie, setMovie] = useState() // 
 
     async function getMovie(url) {
         const res = await fetch(url)
         const data = await res.json()
         if (data) {
             setMovie(data)
+            formatDate(data.release_date)
+            formatMonetaryValue(data.budget, data.revenue)
         }
         
     }
@@ -31,7 +37,24 @@ export default function MovieDetails() {
         
     }, [router.query.movieDetailsId]); // Dependência deve ser o ID da URL
 
+  function formatMonetaryValue (budget, revenue) {
+    if (budget) {
+        const formattedBudget = budget.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+        setBudget(formattedBudget)
+    }
+    if (revenue) {
+        const formattedRevenue = revenue.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+        setRevenue(formattedRevenue)
+    }
     
+  }
+
+
+  function formatDate (date) {
+    const releaseDate = new Date(date);
+    const formattedReleaseDate = releaseDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    setDate(formattedReleaseDate)
+  }
     return (
         <div className={styles.mainContainer}>
             <div className={styles.movie}>
@@ -41,15 +64,19 @@ export default function MovieDetails() {
                         <h1>{movie.title}</h1>
                         <h2>{movie.tagline}</h2>
                         <p className={styles.overview}><span>Overview:</span> {movie.overview}</p>
-                        <p><span>Release date:</span> {movie.release_date}</p>
-                        <p><span>Budget:</span> {movie.budget}</p>
-                        <p><span>Revenue:</span> {movie.revenue}</p>
+                        <p><span>Note:</span> {movie.vote_average.toFixed(1)}</p>
+                        <p><span>Release date:</span> {date}</p>
+                        <p><span>Budget:</span> {budget}</p>
+                        <p><span>Revenue:</span> {revenue}</p>
                         <p><span>Original title:</span> {movie.original_title}</p>
                         <p>
                             <span>Genres:</span>
-                            {movie.genres.map((movie)=>(
-                            <p className={styles.genre}> / {movie.name}</p>
-                        ))}
+                                {movie.genres.map((genre, index) => (
+                                    <React.Fragment> 
+                                    {index > 0 && <span> / </span>}
+                                    <span className={styles.genre}> {genre.name}</span>
+                                    </React.Fragment>
+                            ))}
                         </p>
                     </>
                 ) : (

@@ -1,10 +1,10 @@
 import styles from '../styles/SearchResults.module.css'
 import Link from 'next/link'
-import {useState, useEffect} from 'react'
+
 import { useRouter } from 'next/router'
 
 export default function SearchResults({results, setInput, setClearResults}) {
-    const router = useRouter() 
+    //const router = useRouter() 
 
     function handleClick() {
         setInput('')
@@ -13,14 +13,14 @@ export default function SearchResults({results, setInput, setClearResults}) {
     try {
         setInput(undefined)
     } catch (error) {
-        console.log('deu erro o idiota: ', error)
+        console.log('Erro: ', error)
     }
     
     return (
         <div className={styles.searchResults}>
 
                 {results.map((item)=>(
-                    <div className={styles.itemResults}>
+                    <div id="idTeste" className={styles.itemResults}>
                         <Link href={`/movieDetails/${item.id}`} legacyBehavior>
                             <a onClick={handleClick}>
                                 <p key={item.id} className={styles.pResult}> 
