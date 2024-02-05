@@ -111,7 +111,7 @@ export default function searchBar({placeholder, setResults, input, setInput, set
         <div className={styles.search}>
             <div className={styles.searchInput}>
                     <input type="text" 
-                    autocomplete="off"
+                    autoComplete="off"
                     placeholder={placeholder}
                     id="searchBarInput"
                     value={input} 
