@@ -30,5 +30,6 @@ Antes de iniciar, certifique-se de que você tem **Node.js** instalado em sua m�
     ```bash
     npm run dev
     ```
+Você também pode utilizar o CodeSpaces disponível aqui no GitHub. Isso poupa o trabalho de clonar o repositório.
 
 Após esses passos, o projeto estará rodando localmente em `http://localhost:3000`. Explore a vasta biblioteca de conteúdos de entretenimento ao seu dispor!
