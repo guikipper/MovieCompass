@@ -15,8 +15,8 @@ Antes de iniciar, certifique-se de que você tem **Node.js** instalado em sua m�
 1. Abra o projeto no GitHub Codespaces ou clone o repositório localmente em sua máquina.
 
     ```bash
-    git clone https://github.com/seuusuario/themoviecompass.git
-    cd themoviecompass
+    git clone https://github.com/guikipper/MovieCompass.git
+    cd MovieCompass
     ```
 
 2. Instale as dependências do projeto.
