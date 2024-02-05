@@ -2,13 +2,13 @@ import { useState, useEffect, use } from "react";
 import { useRouter } from "next/router";
 import Card from "../../components/Card";
 import styles from "../../styles/SearchPage.module.css";
-import Loading from "../../components/Loading";
 
 export default function Search() {
   const [movies, setMovies] = useState([]);
   const router = useRouter();
   const [actualPage, setActualPage] = useState(1);
   const [totalPages, setTotalPages] = useState();
+  const [searchText, setSearchText] = useState();
 
   async function getMovie(url) {
     const res = await fetch(url);
@@ -22,10 +22,10 @@ export default function Search() {
   useEffect(() => {
     if (router.isReady) {
       const { searchId } = router.query;
+      setSearchText(searchId)
       const api_key = process.env.NEXT_PUBLIC_API_KEY;
       const search_url = "https://api.themoviedb.org/3/search/movie";
       const url = `${search_url}?query=${searchId}&${api_key}&page=${actualPage}`;
-      console.log(url);
       getMovie(url);
     }
   }, [router.query.searchId, actualPage]);
@@ -34,11 +34,15 @@ export default function Search() {
     setActualPage(page);
   }
 
-  console.log("Total Pages: ", totalPages);
-  console.log("Actual Page: ", actualPage)
+  useEffect(() => {
+    setActualPage(1)
+  }, [searchText])
+
 
   return (
     <div className={styles.main}>
+        <div className={styles.topTitle}>
+        </div>
       <div className={styles.mainSearchPage}>
         <div className={styles.searchPageResults}>
           {movies &&

@@ -18,6 +18,11 @@
     width: 40%;
     margin-bottom: 12px;
 }
+@media(max-width: 1000px) {
+    .movie {
+        width: 70%;
+    }  
+}
 .movie img {
     margin-top: 20px;
 }

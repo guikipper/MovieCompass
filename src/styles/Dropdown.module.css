@@ -1,0 +1,32 @@
+.dropdown {
+    background-color: lightgray;
+    position: absolute;
+    right: 16px;
+}
+.dropdown button {
+    padding: 8px;
+    border: 8px;
+    background-color: lightgray;
+    color: black;
+    cursor: pointer;
+}
+.dropdown button:hover {
+    background-color: rgb(194, 188, 188);
+}
+.dropdown_list {
+    padding: 8px;
+    right: 16px;
+    margin-top: 530px;
+    z-index: 9998;
+    position: absolute;
+    width: 250px;
+    background-color: lightgray;
+}
+.dropdown_item {
+    cursor: pointer;
+    padding: 4px;
+    list-style: none;
+}
+.dropdown_item:hover {
+    background-color: rgb(194, 188, 188);
+}

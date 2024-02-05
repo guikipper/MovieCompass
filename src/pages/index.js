@@ -1,10 +1,10 @@
 import styles from "../styles/Home.module.css";
-import loadSize from "../styles/Loading.module.css";
 import { useEffect, useState } from "react";
 import Card from "../components/Card";
 import ArrowBackIosOutlinedIcon from "@mui/icons-material/ArrowBackIosOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
-import Loading from "@/components/Loading";
+import Loading from "../components/Loading";
+
 
 require("dotenv").config();
 
@@ -23,7 +23,6 @@ export default function Home() {
   async function getTopRatedMovies(api) {
     const res = await fetch(api);
     const data = await res.json();
-    console.log("Recebendo os topRated: ", data.results);
     setTopRated(data.results);
   }
 
@@ -31,7 +30,6 @@ export default function Home() {
   const initialItem = actualPage * itensPerPage;
   const lastItem = initialItem + itensPerPage;
   const itensOfPage = topRated.slice(initialItem, lastItem);
-  console.log("esses: ", itensOfPage);
 
   useEffect(() => {
     if (actualPage > 0) {
@@ -47,14 +45,19 @@ export default function Home() {
     }
   }, [actualPage, totalPages]);
 
-  // ... (rest of your code)
-
   useEffect(() => {
     getTopRatedMovies(api);
   }, []);
 
   return (
     <>
+    <div className={styles.main}>
+        <div className={styles.divTitle}>
+          <h1>Top Rated Movies</h1>
+
+        </div>
+        
+      
     {topRated.length != 0 ? (
         <div className={styles.mainContent}>
           {showBackButton && (
@@ -98,7 +101,8 @@ export default function Home() {
           <Loading/>
         </div>
       )}
-    </>
+    </div>
+  </>
    
   );
 }

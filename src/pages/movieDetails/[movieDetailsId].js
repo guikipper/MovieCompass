@@ -7,6 +7,7 @@ import React from 'react'
 
 
 export default function MovieDetails() {
+
     const router = useRouter()    
 
     const api_key= process.env.NEXT_PUBLIC_API_KEY
@@ -20,11 +21,11 @@ export default function MovieDetails() {
 
     async function getMovie(url) {
         const res = await fetch(url)
-        const data = await res.json()
-        if (data) {
-            setMovie(data)
-            formatDate(data.release_date)
-            formatMonetaryValue(data.budget, data.revenue)
+        const movieDetails = await res.json()
+        if (movieDetails) {
+            setMovie(movieDetails)
+            formatDate(movieDetails.release_date)
+            formatMonetaryValue(movieDetails.budget, movieDetails.revenue)
         }
         
     }

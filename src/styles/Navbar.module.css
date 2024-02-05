@@ -3,7 +3,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 3em 3.5em;
-    background-color: #220c09;
+    background-color: rgb(65, 64, 64);
+    /* background-color: #220c09; */
     height: 150px;
     color: #fff;
 }
@@ -26,6 +27,19 @@
     cursor: pointer;
     transition: 0.2s;
 }
+@media (max-width: 1000px) {
+    .navbar {
+        padding: 1em 1.5em;
+        flex-direction: column;
+        height: 200px;
+    }
+    .logo {
+        margin-left: .2em;
+        font-size: small;
+    }
+    
+  }
+
 .logo h1:hover {
     color: #ac773c;
 }

@@ -1,0 +1,32 @@
+.mainDiv {
+    height: 600px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    flex-direction: column;
+}
+.mainDiv h1 {
+    margin-bottom: 70px;
+}
+.mainDiv a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit
+}
+.notFoundButton {
+    height: 50px;
+    margin-top: 50px;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(63, 58, 58);
+    border-radius: 8px;
+    padding: 8px;
+    color: white;
+}
+.notFoundButton:hover {
+    background-color: rgb(90, 87, 87);
+}

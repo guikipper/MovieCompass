@@ -6,6 +6,11 @@
     align-items: center;
     border-radius: 16px;
   }
+
+  
+.search:hover {
+  box-shadow: 0px 0px 10px #000000;
+}
   
   .searchInput {
     display: flex;
@@ -20,14 +25,12 @@
     border: none;
     outline: none;
   }
-  
   .searchIcon {
     cursor: pointer;
     display: grid;
     place-items: center;
     height: 50px;
     width: 50px;
-    
   }
   .searchIcon:hover {
     color: black;

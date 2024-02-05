@@ -1,9 +1,7 @@
 import styles from '../styles/SearchResults.module.css'
 import Link from 'next/link'
 
-import { useRouter } from 'next/router'
-
-export default function SearchResults({results, setInput, setClearResults}) {
+export default function SearchResults({results, setInput, setClearResults, selectedItemIndex}) {
     //const router = useRouter() 
 
     function handleClick() {
@@ -17,13 +15,18 @@ export default function SearchResults({results, setInput, setClearResults}) {
     }
     
     return (
-        <div className={styles.searchResults}>
-
-                {results.map((item)=>(
+        <div id="searchResults" className={styles.searchResults}>
+                {results.map((item, index)=>(
                     <div id="idTeste" className={styles.itemResults}>
-                        <Link href={`/movieDetails/${item.id}`} legacyBehavior>
+                        <Link 
+                        href={`/movieDetails/${item.id}`} legacyBehavior>
                             <a onClick={handleClick}>
-                                <p key={item.id} className={styles.pResult}> 
+                           
+                            <p
+                               key={item.id}
+                               id={item.id} 
+                               className={`${selectedItemIndex == index ? styles.selected : ''}`}
+                            > 
                                     {item.title}
                                 </p>
                             </a>
