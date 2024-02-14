@@ -35,7 +35,7 @@ Antes de iniciar, certifique-se de que você tem **Node.js** instalado em sua m�
 
 <br>
 
-É possível utilizar tanto o mouse quando o teclado, com as setas direcionais up e down, visando praticidade para os usuários.
+Para selecionar itens da lista de resultados da barra de pesquisa é possível utilizar tanto o mouse quando o teclado, com as setas direcionais up e down. Isso permite maior interação com o usuário e facilita a sua experiência.
 
 <br>
 
