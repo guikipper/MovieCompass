@@ -30,16 +30,25 @@ Antes de iniciar, certifique-se de que você tem **Node.js** instalado em sua m�
     ```bash
     npm run dev
     ```
-## Funcionalidades da Barra de Pesquisa
+## Funcionalidades da Barra de Pesquisa 🔍
 ![batman1](https://github.com/guikipper/MovieCompass/assets/33471042/f0de9350-84e7-42af-b182-692d46d5d6d2)
-
 
 
 Para selecionar itens da lista de resultados da barra de pesquisa é possível utilizar tanto o mouse quando o teclado, com as setas direcionais up e down. Isso permite maior interação com o usuário e facilita a sua experiência.
 
 
-
 ![barra de pesquisa 2](https://github.com/guikipper/MovieCompass/assets/33471042/c54c9763-d78c-4b7f-98ec-33240d47e24c)
+
+
+## Responsividade 📱💻
+![image](https://github.com/guikipper/MovieCompass/assets/33471042/95f08262-4598-486d-94fb-5f227c5d286f)
+
+
+A responsividade foi implementada no projeto para garantir uma ótima experiência de usuário em todos os dispositivos, permitindo que o conteúdo se ajuste perfeitamente desde telas de celulares até desktops. 
+
+
+![image](https://github.com/guikipper/MovieCompass/assets/33471042/7183ceb8-651d-481e-a455-0e8355043388)
+
     
 🌟 Dica Rápida: Utilize o CodeSpaces! 🌟
 
