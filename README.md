@@ -32,7 +32,13 @@ Antes de iniciar, certifique-se de que você tem **Node.js** instalado em sua m�
     ```
 ## Funcionalidades da Barra de Pesquisa
 ![batman1](https://github.com/guikipper/MovieCompass/assets/33471042/f0de9350-84e7-42af-b182-692d46d5d6d2)
+
+<br>
+
 É possível utilizar tanto o mouse quando o teclado, com as setas direcionais up e down, visando praticidade para os usuários.
+
+<br>
+
 ![barra de pesquisa 2](https://github.com/guikipper/MovieCompass/assets/33471042/c54c9763-d78c-4b7f-98ec-33240d47e24c)
     
 🌟 Dica Rápida: Utilize o CodeSpaces! 🌟
