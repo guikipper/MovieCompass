@@ -18,8 +18,10 @@
   @media (max-width: 1000px) {
     .searchResults {
       top: 150px;
+      width: 30%;
+      max-width: 250px;
+      min-width: 70%;
     }
-    
   }
 
 .itemResults {

@@ -16,7 +16,6 @@ export default function MovieDetails() {
     const [budget, setBudget] = useState()
     const [revenue, setRevenue] = useState()
     
-    //states
     const [movie, setMovie] = useState() // 
 
     async function getMovie(url) {
@@ -27,8 +26,8 @@ export default function MovieDetails() {
             formatDate(movieDetails.release_date)
             formatMonetaryValue(movieDetails.budget, movieDetails.revenue)
         }
-        
     }
+
     useEffect(() => {
         if (router.isReady) {
             const { movieDetailsId } = router.query
@@ -46,10 +45,8 @@ export default function MovieDetails() {
     if (revenue) {
         const formattedRevenue = revenue.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
         setRevenue(formattedRevenue)
-    }
-    
+    }    
   }
-
 
   function formatDate (date) {
     const releaseDate = new Date(date);
