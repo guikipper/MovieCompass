@@ -39,15 +39,15 @@ Para selecionar itens da lista de resultados da barra de pesquisa é possível u
 
 ![barra de pesquisa 2](https://github.com/guikipper/MovieCompass/assets/33471042/c54c9763-d78c-4b7f-98ec-33240d47e24c)
 
-
 ## Responsividade 📱💻
-![image](https://github.com/guikipper/MovieCompass/assets/33471042/95f08262-4598-486d-94fb-5f227c5d286f)
 
+<p align="center">
+  <img src="https://github.com/guikipper/MovieCompass/assets/33471042/95f08262-4598-486d-94fb-5f227c5d286f" alt="Print de tela de smartphone 1" style="width: auto; height: 300px; margin-right: 10px;">
+  <img src="https://github.com/guikipper/MovieCompass/assets/33471042/100dc09e-9e67-4201-8762-a0ac6c33d867" alt="Print de tela de smartphone 2" style="width: auto; height: 300px;">
+</p>
 
-A responsividade foi implementada no projeto para garantir uma ótima experiência de usuário em todos os dispositivos, permitindo que o conteúdo se ajuste perfeitamente desde telas de celulares até desktops. 
+A responsividade foi implementada no projeto para garantir uma ótima experiência de usuário em todos os dispositivos, permitindo que o conteúdo se ajuste perfeitamente desde telas de celulares até desktops.
 
-
-![image](https://github.com/guikipper/MovieCompass/assets/33471042/7183ceb8-651d-481e-a455-0e8355043388)
 
     
 🌟 Dica Rápida: Utilize o CodeSpaces! 🌟
