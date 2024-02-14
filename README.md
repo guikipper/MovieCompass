@@ -42,8 +42,8 @@ Para selecionar itens da lista de resultados da barra de pesquisa é possível u
 ## Responsividade 📱💻
 
 <p align="center">
-  <img src="https://github.com/guikipper/MovieCompass/assets/33471042/95f08262-4598-486d-94fb-5f227c5d286f" alt="Print de tela de smartphone 1" style="width: auto; height: 300px; margin-right: 10px;">
-  <img src="https://github.com/guikipper/MovieCompass/assets/33471042/100dc09e-9e67-4201-8762-a0ac6c33d867" alt="Print de tela de smartphone 2" style="width: auto; height: 300px;">
+  <img src="https://github.com/guikipper/MovieCompass/assets/33471042/95f08262-4598-486d-94fb-5f227c5d286f" alt="Print de tela de smartphone 1" style="width: auto; height: auto; margin-right: 10px;">
+  <img src="https://github.com/guikipper/MovieCompass/assets/33471042/100dc09e-9e67-4201-8762-a0ac6c33d867" alt="Print de tela de smartphone 2" style="width: auto; height: auto;">
 </p>
 
 A responsividade foi implementada no projeto para garantir uma ótima experiência de usuário em todos os dispositivos, permitindo que o conteúdo se ajuste perfeitamente desde telas de celulares até desktops.
